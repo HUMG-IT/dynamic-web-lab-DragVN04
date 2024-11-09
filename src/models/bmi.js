@@ -1,4 +1,3 @@
-
 // Hàm tính chỉ số BMI
 function calculateBMI(weight, height) {
     // Chuyển đổi chiều cao từ cm sang mét và tính BMI
