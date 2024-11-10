@@ -19,13 +19,7 @@ function killPort3000() {
         console.error(`Lỗi khi tìm kiếm cổng 3000 trên Windows: ${error}`);
         return;
       }
-      
       const lines = stdout.trim().split("\n");
-      if (lines.length === 0 || !stdout.trim()) {
-        console.log("Không có tiến trình nào đang sử dụng cổng 3000 trên Windows.");
-        return;
-      }
-
       lines.forEach(line => {
         const parts = line.trim().split(/\s+/);
         const pid = parts[parts.length - 1]; // PID là giá trị cuối
